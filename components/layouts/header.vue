@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <!-- preloader -->
     <!-- <div id="preloader">
       <img src="assets/images/icon/preloader.gif" alt="preloader" />
@@ -42,12 +42,12 @@
               >
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <a class="dropdown-item" href="project-details.html"
+                  <a class="dropdown-item" href="/tool/search"
                     >Yo查词</a
                   >
                 </li>
-                <li><a class="dropdown-item" href="comment.html">Yo素材</a></li>
-                <li><a class="dropdown-item" href="comment.html">Yo字体</a></li>
+                <li><a class="dropdown-item" href="/tool/font">Yo字体</a></li>
+                <li><a class="dropdown-item" href="/tool/source">Yo素材</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -74,12 +74,11 @@
             <li class="nav-item">
               <a class="nav-link" href="portfolio.html">后台管理</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="contact-me.html">联系我们</a>
-            </li>
+            </li> -->
           </ul>
         </div>
-        <!-- .navbar-collapse -->
       </div>
     </nav>
   </div>
@@ -94,4 +93,8 @@ export default {
   components: {},
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container{
+  height: 90px;
+}
+</style>

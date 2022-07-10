@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="height:800px">
     字体库 - 弹幕功能
   </div>
 </template>

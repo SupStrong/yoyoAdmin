@@ -1,6 +1,6 @@
 <template>
-  <div style="height:800px">
-    查重 - 零克查词
+  <div>
+    个人中心
   </div>
 </template>
 <script>
