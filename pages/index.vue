@@ -18,7 +18,6 @@
                         <h3>模板 快来一起来设计吧</h3>
                         <ul class="link d-flex">
                             <li><a class="btn btn-generic" href="#">加入Yoyou</a></li>
-                            </li>
                         </ul>
                     </div>
                 </div>
