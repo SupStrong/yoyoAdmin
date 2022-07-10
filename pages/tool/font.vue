@@ -1,5 +1,5 @@
 <template>
-  <div class="row align-items-center justify-content-between" style="height:800px">
+  <div class="container" style="height:800px">
     字体库 - 弹幕功能
   </div>
 </template>

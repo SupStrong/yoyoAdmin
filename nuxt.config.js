@@ -1,22 +1,54 @@
 const url = 'http://127.0.0.1:3000'
+const ossUrl = 'https://aliyun-wb-bvqq7ezi1t.oss-cn-beijing.aliyuncs.com'
 
 const CompressionPlugin = require("compression-webpack-plugin");
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'admin',
+    title: '薯Yoyo-小红书，抖音模板设计平台',
     htmlAttrs: {
       lang: 'en'
     },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+    meta: [{
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        name: 'sogou_site_verification',
+        content: 'PIh1QC4Dae'
+      },  
+      {
+        name: 'keywords',
+        hid: 'keywords',
+        content: "模板，设计，免费，小红书模板"
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: '薯YoYo专为模板设计'
+      },
+      {
+        name: 'format-detection',
+        content: 'telephone=no'
+      }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    }],
+    script: [{
+      src: "/json/color.js",
+      type: "text/javascript",
+      chartset: "utf-8",
+    }, {
+      src: "/json/district.js",
+      type: "text/javascript",
+      chartset: "utf-8",
+    }, ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -84,10 +116,19 @@ export default {
     productionSourceMap: false,
   },
   proxy: {
-    "/api":{
+    '/api':{
       target:url,
-      pathRewrite:{"^/api":''}
-    }
+      pathRewrite:{
+        "^/api":''
+      }
+    },
+    '/oss': {
+      target: ossUrl,
+      changeOrigin: false,
+      pathRewrite: {
+        '^/oss': '/oss'
+      }
+    },
   },
   axios: {
     proxy: true,

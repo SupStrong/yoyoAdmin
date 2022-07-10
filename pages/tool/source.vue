@@ -1,5 +1,5 @@
 <template>
-  <div style="height:800px">
+  <div class="container" style="height:800px">
     图片素材库 - 瀑布流
   </div>
 </template>

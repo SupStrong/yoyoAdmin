@@ -1,5 +1,5 @@
 <template>
-  <div style="height:800px">
+  <div class="container" style="height:800px">
     查重 - 零克查重
   </div>
 </template>
