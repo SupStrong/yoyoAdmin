@@ -70,7 +70,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">后台管理</a>
+              <a class="nav-link" href="/admin/console">后台管理</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="contact-me.html">联系我们</a>
@@ -93,6 +93,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .container{
-  height: 90px;
+  height: 60px;
 }
 </style>
