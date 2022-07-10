@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-7 col-12">
           <ul class="link-footer">
-            <li><a href="#">首页</a></li>
+            <li><a href="/">首页</a></li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -33,7 +33,7 @@
           <ul class="designby">
             <li>
               <a href="#"><i class="fa-solid fa-heart"></i> Yo！</a
-              ><a href="http://www.bootstrapmb.com/">陪伴你每一天</a>
+              ><a href="http://www.bootstrapmb.com/">与你陪伴每一天</a>
             </li>
           </ul>
         </div>

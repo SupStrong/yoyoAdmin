@@ -26,7 +26,7 @@
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
+              <a class="nav-link active" aria-current="page" href="/"
                 >首页</a
               >
             </li>
@@ -42,9 +42,7 @@
               >
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <a class="dropdown-item" href="/tool/search"
-                    >Yo查词</a
-                  >
+                  <a class="dropdown-item" href="/tool/search">Yo查词</a>
                 </li>
                 <li><a class="dropdown-item" href="/tool/font">Yo字体</a></li>
                 <li><a class="dropdown-item" href="/tool/source">Yo素材</a></li>

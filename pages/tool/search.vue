@@ -1,6 +1,6 @@
 <template>
   <div style="height:800px">
-    字体库 - 弹幕功能
+    查重 - 零克查重
   </div>
 </template>
 <script>
