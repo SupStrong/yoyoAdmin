@@ -67,7 +67,10 @@ export default {
       ssr: false,
     }
   ],
-
+  server: {
+      port: 3000, // 线上端口
+      host: '0.0.0.0', 
+  },
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 

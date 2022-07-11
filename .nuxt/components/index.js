@@ -1,6 +1,6 @@
-export { default as LayoutsFooter } from '../..\\components\\layouts\\footer.vue'
-export { default as LayoutsHeader } from '../..\\components\\layouts\\header.vue'
-export { default as LayoutsSlider } from '../..\\components\\layouts\\slider.vue'
+export const LayoutsFooter = () => import('../..\\components\\layouts\\footer.vue' /* webpackChunkName: "components/layouts-footer" */).then(c => wrapFunctional(c.default || c))
+export const LayoutsHeader = () => import('../..\\components\\layouts\\header.vue' /* webpackChunkName: "components/layouts-header" */).then(c => wrapFunctional(c.default || c))
+export const LayoutsSlider = () => import('../..\\components\\layouts\\slider.vue' /* webpackChunkName: "components/layouts-slider" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
