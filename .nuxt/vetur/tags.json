@@ -1,0 +1,11 @@
+{
+  "LayoutsFooter": {
+    "description": "Auto imported from components/layouts/footer.vue"
+  },
+  "LayoutsHeader": {
+    "description": "Auto imported from components/layouts/header.vue"
+  },
+  "LayoutsSlider": {
+    "description": "Auto imported from components/layouts/slider.vue"
+  }
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "name": "mySource",
+    "path": "/mySource",
+    "component": "D:\\\\nuxt-admin\\\\admin\\\\pages\\\\mySource\\\\index.vue",
+    "chunkName": "pages/mySource/index",
+    "_name": "_9ee610c6"
+  },
+  {
+    "name": "admin-console",
+    "path": "/admin/console",
+    "component": "D:\\\\nuxt-admin\\\\admin\\\\pages\\\\admin\\\\console.vue",
+    "chunkName": "pages/admin/console",
+    "_name": "_7744dec6"
+  },
+  {
+    "name": "tool-font",
+    "path": "/tool/font",
+    "component": "D:\\\\nuxt-admin\\\\admin\\\\pages\\\\tool\\\\font.vue",
+    "chunkName": "pages/tool/font",
+    "_name": "_20a5cb76"
+  },
+  {
+    "name": "tool-search",
+    "path": "/tool/search",
+    "component": "D:\\\\nuxt-admin\\\\admin\\\\pages\\\\tool\\\\search.vue",
+    "chunkName": "pages/tool/search",
+    "_name": "_01a440c4"
+  },
+  {
+    "name": "tool-source",
+    "path": "/tool/source",
+    "component": "D:\\\\nuxt-admin\\\\admin\\\\pages\\\\tool\\\\source.vue",
+    "chunkName": "pages/tool/source",
+    "_name": "_31711ede"
+  },
+  {
+    "name": "user-login",
+    "path": "/user/login",
+    "component": "D:\\\\nuxt-admin\\\\admin\\\\pages\\\\user\\\\login.vue",
+    "chunkName": "pages/user/login",
+    "_name": "_87799360"
+  },
+  {
+    "name": "user-setting",
+    "path": "/user/setting",
+    "component": "D:\\\\nuxt-admin\\\\admin\\\\pages\\\\user\\\\setting.vue",
+    "chunkName": "pages/user/setting",
+    "_name": "_bcc8dc12"
+  },
+  {
+    "name": "web-home",
+    "path": "/web/home",
+    "component": "D:\\\\nuxt-admin\\\\admin\\\\pages\\\\web\\\\home.vue",
+    "chunkName": "pages/web/home",
+    "_name": "_4748ed76"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\nuxt-admin\\\\admin\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_73321ae4"
+  }
+]
