@@ -56,6 +56,8 @@ export default {
     'element-ui/lib/theme-chalk/index.css',
     '@/assets/style/bootstrap.min.css',
     '@/assets/style/style.css',
+    '@/assets/style/flex.scss',
+    '@/assets/style/public.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -65,7 +67,11 @@ export default {
     {
       src: "@/plugins/axios",
       ssr: false,
-    }
+    },
+    {
+      src: "@/plugins/waterfall",
+      ssr: false,
+    },
   ],
   server: {
       port: 3000, // 线上端口

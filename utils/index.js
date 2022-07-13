@@ -1,5 +1,4 @@
 import Cookie from "js-cookie";
-import * as dd from 'dingtalk-jsapi'
 
 export function getDingTalkPermission(callback) {
   dd.ready(() => {
@@ -279,5 +278,12 @@ export function debounce(fn, delay) {
       clearTimeout(timer)
     }
     timer = setTimeout(fn, delay) // 简化写法
+  }
+}
+export function isMobile(){
+  if(window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+      return true; // 移动端
+  }else{
+      return false; // PC端
   }
 }

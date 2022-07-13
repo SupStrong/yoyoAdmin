@@ -4,12 +4,17 @@ import { decode, parsePath, withoutBase, withoutTrailingSlash, normalizeURL } fr
 import { getMatchedComponentsInstances, getChildrenComponentInstancesUsingFetch, promisify, globalHandleError, urlJoin, sanitizeComponent } from './utils'
 import NuxtError from './components/nuxt-error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
+import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import '..\\node_modules\\element-ui\\lib\\theme-chalk\\index.css'
+import '..\\node_modules\\_element-ui@2.15.9@element-ui\\lib\\theme-chalk\\index.css'
 
 import '..\\assets\\style\\bootstrap.min.css'
 
 import '..\\assets\\style\\style.css'
+
+import '..\\assets\\style\\flex.scss'
+
+import '..\\assets\\style\\public.scss'
 
 import _6f6c098b from '..\\layouts\\default.vue'
 
@@ -48,7 +53,7 @@ export default {
       }
     }, [
       loadingEl,
-
+      h(NuxtBuildIndicator),
       transitionEl
     ])
   },
@@ -184,6 +189,10 @@ export default {
     },
 
     setLayout (layout) {
+      if(layout && typeof layout !== 'string') {
+        throw new Error('[nuxt] Avoid using non-string value as layout property.')
+      }
+
       if (!layout || !layouts['_' + layout]) {
         layout = 'default'
       }
