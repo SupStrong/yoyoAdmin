@@ -19,6 +19,7 @@ import nuxt_plugin_elementui_d905880e from 'nuxt_plugin_elementui_d905880e' // S
 import nuxt_plugin_cookies_d3269bca from 'nuxt_plugin_cookies_d3269bca' // Source: ..\\plugins\\cookies (mode: 'all')
 import nuxt_plugin_axios_2228ef02 from 'nuxt_plugin_axios_2228ef02' // Source: ..\\plugins\\axios (mode: 'client')
 import nuxt_plugin_waterfall_d85c14c4 from 'nuxt_plugin_waterfall_d85c14c4' // Source: ..\\plugins\\waterfall (mode: 'client')
+import nuxt_plugin_jquery_31f33992 from 'nuxt_plugin_jquery_31f33992' // Source: ..\\plugins\\jquery (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -237,6 +238,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_waterfall_d85c14c4 === 'function') {
     await nuxt_plugin_waterfall_d85c14c4(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_jquery_31f33992 === 'function') {
+    await nuxt_plugin_jquery_31f33992(app.context, inject)
   }
 
   // Lock enablePreview in context

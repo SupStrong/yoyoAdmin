@@ -72,6 +72,10 @@ export default {
       src: "@/plugins/waterfall",
       ssr: false,
     },
+    {
+      src: "@/plugins/jquery",
+      ssr: false,
+    }
   ],
   server: {
       port: 3000, // 线上端口
