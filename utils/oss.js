@@ -7,7 +7,7 @@ export function client() {
 		accessKeyId: 'LTAI5tSe1BZDK7mUvFQi3xmt',
 		accessKeySecret: 'la8oUs0SwpM8MjFqDUO4MaH4ii8hcX',
 		bucket: 'aliyun-wb-bvqq7ezi1t',
-	}); //后端提供数据
+	}); 
 
 	return client;
 }

@@ -93,6 +93,10 @@ export default {
           })
           break;
            case 'check':
+            if(this.checkForm.old.length == 0){
+              this.$message.error('文案不能为空');
+              return;
+            }
           break;
            case 'clear':
             this.checkForm = {
