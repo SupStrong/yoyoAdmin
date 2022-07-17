@@ -48,7 +48,15 @@ export default {
       src: "/json/district.js",
       type: "text/javascript",
       chartset: "utf-8",
-    }, ],
+    },{
+      src: "/json/text.js",
+      type: "text/javascript",
+      chartset: "utf-8",
+    },{
+      src: "/json/violate.js",
+      type: "text/javascript",
+      chartset: "utf-8",
+    } ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -74,6 +82,10 @@ export default {
     },
     {
       src: "@/plugins/jquery",
+      ssr: false,
+    },
+    {
+      src: "@/plugins/clipboard",
       ssr: false,
     }
   ],

@@ -9,3 +9,4 @@ You can directly use them in pages and other components without the need to impo
 - `<LayoutsFooter>` | `<layouts-footer>` (components/layouts/footer.vue)
 - `<LayoutsHeader>` | `<layouts-header>` (components/layouts/header.vue)
 - `<LayoutsSlider>` | `<layouts-slider>` (components/layouts/slider.vue)
+- `<PublicBarrage>` | `<public-barrage>` (components/public/barrage.vue)

@@ -44,6 +44,9 @@
                 <li>
                   <a class="dropdown-item" href="/tool/search">Yo查词</a>
                 </li>
+                <li>
+                  <a class="dropdown-item" href="/tool/secretary">Yo文案</a>
+                </li>
                 <li><a class="dropdown-item" href="/tool/font">Yo字体</a></li>
                 <li><a class="dropdown-item" href="/tool/source">Yo素材</a></li>
               </ul>

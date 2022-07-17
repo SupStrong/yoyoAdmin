@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div class="tips G-Mt-15">过滤文案数：<span class="tips-text">9,271,493</span></div>
+    <div class="tips G-Mt-15">过滤文案数：<span class="tips-text">{{allFilterNum}}</span></div>
     <div class="banner">
       <swiper :options="swiperOption" style="width: 100%" ref="mySwiper">
         <swiper-slide v-for="(banner, index) in banners" :key="index">
@@ -20,10 +20,11 @@
           id=""
           cols="30"
           rows="10"
+          v-model="checkForm.old"
         ></textarea>
         <div class="G-Mt-10">
-          <el-button type="success">检测一下</el-button>
-          <el-button type="danger">清空文字</el-button>
+          <el-button type="success" @click="handleClick('check')">检测一下</el-button>
+          <el-button type="danger" @click="handleClick('clear')">清空文字</el-button>
         </div>
       </div>
       <div class="r-box">
@@ -34,10 +35,11 @@
           id=""
           cols="30"
           rows="10"
+          v-model="checkForm.new"
         ></textarea>
         <div class="G-Mt-10 fl-row-justy text-all">
-          <p class="G-Fsize-16">全文：2112字 违禁词：0字 敏感词：0字</p>
-          <el-button type="success">复制文字</el-button>
+          <p class="G-Fsize-16">全文：{{checkForm.old.length}}字 违禁词：{{checkForm.prohibit}}字 敏感词：{{checkForm.sensitive}}字</p>
+          <el-button type="success" @click="handleClick('copy')">复制文字</el-button>
         </div>
       </div>
     </div>
@@ -47,6 +49,7 @@
 export default {
   data() {
     return {
+      copyVal:'测试复制',
       swiperOption: {
         autoplay: {
           delay: 5000,
@@ -62,6 +65,13 @@ export default {
           },
         },
       },
+      checkForm:{
+        old:'',
+        new:'',
+        prohibit:0,
+        sensitive:0,
+      },
+      allFilterNum:12145,
       banners: [
         "http://ci.lingke.pro/banner.png",
         "https://img2.baidu.com/it/u=2064684749,2471246240&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=282",
@@ -73,6 +83,28 @@ export default {
       return this.$refs.mySwiper.swiper;
     },
   },
+  methods:{
+    handleClick(type){
+      let that = this;
+				switch (type) {
+          case 'copy':
+          this.$copyText(this.copyVal).then(() => {
+              this.$message.success("复制成功！");
+          })
+          break;
+           case 'check':
+          break;
+           case 'clear':
+            this.checkForm = {
+              old:'',
+              new:'',
+              prohibit:0,
+              sensitive:0
+            }
+          break;
+        }
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>

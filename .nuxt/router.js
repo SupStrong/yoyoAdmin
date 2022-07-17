@@ -8,6 +8,7 @@ const _9ee610c6 = () => interopDefault(import('..\\pages\\mySource\\index.vue' /
 const _7744dec6 = () => interopDefault(import('..\\pages\\admin\\console.vue' /* webpackChunkName: "pages/admin/console" */))
 const _20a5cb76 = () => interopDefault(import('..\\pages\\tool\\font.vue' /* webpackChunkName: "pages/tool/font" */))
 const _01a440c4 = () => interopDefault(import('..\\pages\\tool\\search.vue' /* webpackChunkName: "pages/tool/search" */))
+const _2f658432 = () => interopDefault(import('..\\pages\\tool\\secretary.vue' /* webpackChunkName: "pages/tool/secretary" */))
 const _31711ede = () => interopDefault(import('..\\pages\\tool\\source.vue' /* webpackChunkName: "pages/tool/source" */))
 const _87799360 = () => interopDefault(import('..\\pages\\user\\login.vue' /* webpackChunkName: "pages/user/login" */))
 const _bcc8dc12 = () => interopDefault(import('..\\pages\\user\\setting.vue' /* webpackChunkName: "pages/user/setting" */))
@@ -41,6 +42,10 @@ export const routerOptions = {
     path: "/tool/search",
     component: _01a440c4,
     name: "tool-search"
+  }, {
+    path: "/tool/secretary",
+    component: _2f658432,
+    name: "tool-secretary"
   }, {
     path: "/tool/source",
     component: _31711ede,

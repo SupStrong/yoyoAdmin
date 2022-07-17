@@ -28,6 +28,13 @@
     "_name": "_01a440c4"
   },
   {
+    "name": "tool-secretary",
+    "path": "/tool/secretary",
+    "component": "D:\\\\nuxt-admin\\\\admin\\\\pages\\\\tool\\\\secretary.vue",
+    "chunkName": "pages/tool/secretary",
+    "_name": "_2f658432"
+  },
+  {
     "name": "tool-source",
     "path": "/tool/source",
     "component": "D:\\\\nuxt-admin\\\\admin\\\\pages\\\\tool\\\\source.vue",

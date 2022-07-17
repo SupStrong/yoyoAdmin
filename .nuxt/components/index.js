@@ -1,6 +1,7 @@
 export { default as LayoutsFooter } from '../..\\components\\layouts\\footer.vue'
 export { default as LayoutsHeader } from '../..\\components\\layouts\\header.vue'
 export { default as LayoutsSlider } from '../..\\components\\layouts\\slider.vue'
+export { default as PublicBarrage } from '../..\\components\\public\\barrage.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

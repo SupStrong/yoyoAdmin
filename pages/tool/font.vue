@@ -5,7 +5,7 @@
       <div class="filter"></div>
       <canvas id="canvas"></canvas>
       <div class="s_show">
-        <div class="magictime twisterInUp" ref="magictime" v-for="(item,index) in newArr" :key="index">{{item}}</div>
+        <div class="magictime twisterInUp" ref="magictime" v-for="(item,index) in newArr" :key="index" :data-id="item.rand">{{item.name}}</div>
     </div>
     </div>
   </div>
@@ -16,8 +16,22 @@ export default {
   data() {
     return {
       newArr:[
-        '欢迎使用彩色星空弹幕',
-        '欢迎使用彩色星空弹幕1'
+        {
+            rand: '1', // 随机数
+            fScale: '1', //缩放比例 0 - 1
+            type: 'text', // 类型 text 文字 image 图片
+            name: '你好', // 文字
+            fColor: '255,255,255', // 颜色
+            fSize: 20, // 字号 
+            fFamily: 'cursive', // 字体
+            fFamilyName: '蜡笔小新体', // 字体原始名称
+            fWeight: '400', // 字体粗细 400 - 800
+            fStyle: 'inherit', // 倾斜度 inherit 默认 italic倾斜
+            fMode: 'inherit', // 排列方式  inherit 默认 tb 上下 
+            fAlign: 'center', // left 左展示 center 居中展示 right 右展示
+            fOpcity: 100, // 透明度 0 - 100
+            fShadow: '', // 文字阴影       
+       },
       ],
       aShowList:null,
       oSend:null
@@ -38,15 +52,34 @@ export default {
   computed: {},
   methods: {
     initAll(obj) {
-      console.log(obj,document.documentElement.clientHeight,"document.documentElement.clientHeight")
+      let idx = obj.getAttribute("data-id");
+      let arr = this.newArr.filter((item) => item.rand == idx);
       var screenHeight = document.documentElement.clientHeight; //获取屏幕可视高度
       var maxTop = screenHeight - obj.offsetHeight; //高度差范围
       obj.style.top = maxTop * Math.random() + "px";
       var screenWidth = document.documentElement.clientWidth; //获取可视宽度
       var maxLeft = screenWidth - obj.offsetWidth; /* - Math.random() * 800 */ //随机宽度差
       obj.style.left = maxLeft + "px";
-      obj.style.color = this.randomColor();
-      this.move(Math.random() * 5 + 1, obj, maxLeft);
+      // 设置字体属性
+      obj.style.color = this.setRgbTo16(arr[0].fColor.split(','));
+      obj.style.fontFamily = arr[0].fFamilyName;
+      obj.style.fWeight = arr[0].fWeight;
+      obj.style.fontStyle = arr[0].fStyle;
+      obj.style.textAlign = arr[0].fAlign;
+      obj.style.opacity = arr[0].fOpcity / 100;
+      obj.style.textShadow = arr[0].fShadow;  
+      this.move(Math.random() * 1 + 1, obj, maxLeft);
+    },
+    setRgbTo16(arr){
+      let color = '#';
+        for(var i=0;i<arr.length;i++){
+            var t = Number(arr[i]).toString(16)
+            if(t == "0"){   //如果为“0”的话，需要补0操作,否则只有5位数
+                t =  t + "0"
+            }
+            color += t;
+        }
+        return color;
     },
     //弹幕移动函数
     move(k, obj, maxLeft) {
@@ -60,17 +93,11 @@ export default {
         }); //H5新增的动画函数
       } else {
         this.initAll(obj); //重新初始化 营造循环弹幕效果
-        /*  oShow.removeChild(obj);//DOM删除子节点 */
       }
     },
     //随机颜色函数
     randomColor() {
       return "#" + Math.random().toString(16).slice(-6); //一行简化版截取后六位
-      /*var str = '#';
-	for(var i = 0;i < 6;i++){
-		str += Math.floor(Math.random() * 16).toString(16);
-	}
-	return str;*/ //普通逻辑版
     },
   },
   components: {},

@@ -20,6 +20,7 @@ import nuxt_plugin_cookies_d3269bca from 'nuxt_plugin_cookies_d3269bca' // Sourc
 import nuxt_plugin_axios_2228ef02 from 'nuxt_plugin_axios_2228ef02' // Source: ..\\plugins\\axios (mode: 'client')
 import nuxt_plugin_waterfall_d85c14c4 from 'nuxt_plugin_waterfall_d85c14c4' // Source: ..\\plugins\\waterfall (mode: 'client')
 import nuxt_plugin_jquery_31f33992 from 'nuxt_plugin_jquery_31f33992' // Source: ..\\plugins\\jquery (mode: 'client')
+import nuxt_plugin_clipboard_41299a22 from 'nuxt_plugin_clipboard_41299a22' // Source: ..\\plugins\\clipboard (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -87,7 +88,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"薯Yoyo-小红书，抖音模板设计平台","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"sogou_site_verification","content":"PIh1QC4Dae"},{"name":"keywords","hid":"keywords","content":"模板，设计，免费，小红书模板"},{"hid":"description","name":"description","content":"薯YoYo专为模板设计"},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"script":[{"src":"\u002Fjson\u002Fcolor.js","type":"text\u002Fjavascript","chartset":"utf-8"},{"src":"\u002Fjson\u002Fdistrict.js","type":"text\u002Fjavascript","chartset":"utf-8"}],"style":[]},
+    head: {"title":"薯Yoyo-小红书，抖音模板设计平台","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"sogou_site_verification","content":"PIh1QC4Dae"},{"name":"keywords","hid":"keywords","content":"模板，设计，免费，小红书模板"},{"hid":"description","name":"description","content":"薯YoYo专为模板设计"},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"script":[{"src":"\u002Fjson\u002Fcolor.js","type":"text\u002Fjavascript","chartset":"utf-8"},{"src":"\u002Fjson\u002Fdistrict.js","type":"text\u002Fjavascript","chartset":"utf-8"},{"src":"\u002Fjson\u002Ftext.js","type":"text\u002Fjavascript","chartset":"utf-8"},{"src":"\u002Fjson\u002Fviolate.js","type":"text\u002Fjavascript","chartset":"utf-8"}],"style":[]},
 
     store,
     router,
@@ -242,6 +243,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_jquery_31f33992 === 'function') {
     await nuxt_plugin_jquery_31f33992(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_clipboard_41299a22 === 'function') {
+    await nuxt_plugin_clipboard_41299a22(app.context, inject)
   }
 
   // Lock enablePreview in context
